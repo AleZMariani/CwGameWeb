@@ -3,18 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <title>Request a cw game</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <style>
+  .bs-example {
+    margin-right: 0;
+    margin-left: 0;
+    background-color: #fff;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    position: relative;
+    padding: 45px 15px 15px;
+    margin: 0 -15px 15px;
+    border-color: #e5e5e5 #eee #eee;
+    border-style: solid;
+    border-width: 1px 0;
+    border-radius: 4px 4px 0 0;
+    -webkit-box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
+    box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
+    }
+  </style>
 </head>
 <body>
 
-  <form method="post" action="http://localhost:3000/v1/api/cwgame">
-    <label for="initial_state">Initial state</label>
-    <input type="text" name="initial_state" id="initial_state"><br/>
-    <label for="size">Size</label>
-    <input type="text" name="size" id="size"><br/>
-    <label for="it">Iteration</label>
-    <input type="text" name="it" id="it"><br/>
+  <div class="row">
+    <div class="col-xs-6 col-sm-4"></div>
+    <div class="col-xs-6 col-sm-4">
+        <div class="bs-example">
+          <h4><strong><p class="text-center">Request a CWGAME future state</p></strong></h4>
+        <form method="post" action="http://localhost:3000/v1/api/cwgame">
+        <label for="initial_state">Initial state</label>
+        <input type="text" class="form-control" name="initial_state" id="initial_state" placeholder="Initial State XOXOOOXOOXOXOXO"><br/>
+        <label for="size">Size</label>
+        <input type="text" class="form-control" name="size" id="size" placeholder="XXX"><br/>
+        <label for="it">Iteration</label>
+        <input type="text" class="form-control" name="it" id="it" placeholder="XXX"><br/>
 
-    <input type="submit" value="Submit">
-  </form>
+        <input type="submit" class="btn btn-default" value="Submit">
+        </form>
+      </div>
+    </div>
+    <!-- Optional: clear the XS cols if their content doesn't match in height -->
+    <div class="clearfix visible-xs-block"></div>
+    <div class="col-xs-6 col-sm-4"></div>
+  </div>
 </body>
 </html>
